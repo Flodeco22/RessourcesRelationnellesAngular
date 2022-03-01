@@ -1,68 +1,82 @@
 @import "variables/colors";
 
 .navbarHeader {
+
+  display: flex;
+  justify-content: space-between;
+  border : 1px solid grey;
+
+
+  a {
+    text-decoration: none;
+    color : black;
+  }
+
+  .leftHeader {
     display: flex;
-    justify-content: space-between;
+  }
+
+  .rightHeader {
+    display: flex;
+  }
+
+  .cellTitleDiv {
+    display: flex;
+    background-color: $white;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 
     a {
-      text-decoration: none;
+      text-align: center;
+      padding : 10px;
     }
 
-    .leftHeader, .rightHeader {
-      display: flex;  
-      column-gap: 1rem;
+    &:hover {
+      background-color: $darken-white;
+    }
   }
-    
-    .dropdown {
-      position: relative;
-      display: inline-block;
+
+  .active {
+    background-color: $yellow;
+
+    &:hover {
+      background-color: $darken-yellow;
+    }
+
+  }
+
+  .cellNav {
   
-      &:hover > .dropdown-content {
-        display: block;
-      }
-  
+    &:hover {
       .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-      }
-      
-      .dropdown-content li {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
         display: block;
-  
+      }
+    }
+
+    .dropdown-content {
+      position: absolute;
+      list-style-type: none;
+      display: none;
+      padding: 0;
+      margin: 0;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+      li {
+        background-color: $white;
+        display: flex;
+
         &:hover {
-          background-color: #ddd;
+          background-color: $darken-white;
         }
-  
-      }
-  
-    }
 
-    .dropbtn {
-      color: $black;
-      background-color: $white;
-      padding: 1rem;
-      border: none;
-
-      &:hover {
-        background-color: $darken-white;
+        a {
+          padding : 10px;
+        }
       }
     }
+  }
 
-    .active {
-      color : $white;
-      background-color: $yellow;
-
-      &:hover {
-        background-color: $darken-yellow;
-      }
-    }
 }
   
  
