@@ -1,10 +1,10 @@
-<app-header></app-header>
+<app-header *ngIf="!router.url.includes('inscription') && !router.url.includes('connexion')"></app-header>
 
 <h1>{{ title }}</h1>
 
 <div class="container">
-  <app-last-resources-list></app-last-resources-list>
+  <router-outlet></router-outlet>
 </div>
 
-<app-footer></app-footer>
+<app-footer *ngIf="!router.url.includes('inscription') && !router.url.includes('connexion')"></app-footer>
 

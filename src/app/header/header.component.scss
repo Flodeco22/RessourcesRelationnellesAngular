@@ -13,6 +13,10 @@
       background-color: $blue;
       background-position: center;
       background-image: url("../../assets/images/logo.png");
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
