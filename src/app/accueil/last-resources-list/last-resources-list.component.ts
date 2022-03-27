@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './last-resources-list.component.html',
   styleUrls: ['./last-resources-list.component.scss']
 })
-export class LastResourcesListComponent implements OnInit {
+export class LastResourcesListComponent{
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

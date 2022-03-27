@@ -1,0 +1,39 @@
+@import "variables/colors";
+
+.listLastRessources {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: $green;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .ressource {
+
+        .titreRessource {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .imageRessource {
+            width: 350px;
+            height: 300px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: $yellow;
+            background-position: center;
+            border-radius: 1rem;
+            border: 0.1rem solid $black;
+        }
+
+        .noImage {
+            background-size: 200px !important;
+        }
+
+        .categorieRessource {
+            color : $white;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@import "variables/colors";
+@import "parts/bandeau";
+
+.contenuAccueil {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    .description {
+        width: 33%;
+        display: flex;
+        align-items: center;
+    }
+
+    .image {
+        img {
+            width: 500px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+    }
+}
+
+.boutonRessources {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+
+    a {
+        text-decoration: none;
+        background-color: $brighten-yellow;
+        padding: 1rem;
+        font-size: 1.5rem;
+        border-radius: 30px;
+
+        &:hover {
+            background-color: $yellow;
+        }
+    }
+}
+
