@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RedirectService } from 'src/app/services/redirect/redirect.service';
 
 @Component({
   selector: 'app-last-resources-list',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LastResourcesListComponent{
 
-  constructor() { }
+  constructor(public redirectService: RedirectService) {
+    
+  }
 
 }
