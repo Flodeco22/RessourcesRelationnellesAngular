@@ -16,6 +16,7 @@ import { CompteComponent } from './compte/compte.component';
 import { ModificationComponent } from './ressource/modification/modification.component';
 import { VisionComponent } from './ressource/vision/vision.component';
 import { AjoutRessourceComponent } from './ressource/ajout-ressource/ajout-ressource.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,9 @@ import { AjoutRessourceComponent } from './ressource/ajout-ressource/ajout-resso
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

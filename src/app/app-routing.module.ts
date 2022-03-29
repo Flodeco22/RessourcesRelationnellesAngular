@@ -10,12 +10,13 @@ import { RessourceComponent } from './ressource/ressource.component';
 import { ModificationComponent } from './ressource/modification/modification.component';
 import { VisionComponent } from './ressource/vision/vision.component';
 import { AjoutRessourceComponent } from './ressource/ajout-ressource/ajout-ressource.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: '', component: AccueilComponent},
   { path: 'inscription', component: InscriptionComponent },
-  { path: 'connexion', component : ConnexionComponent},
-  { path: 'paramètres', component : CompteComponent},
+  { path: 'connexion', component : ConnexionComponent, canActivate: [AuthGuard]},
+  { path: 'parametres', component : CompteComponent, canActivate: [AuthGuard]},
   { path: 'gallerieRessources', component : GalerieRessourcesComponent},
   { path: 'ressource/ajouter', component: AjoutRessourceComponent},
   { path: 'ressource/:id', component : RessourceComponent, children : [
