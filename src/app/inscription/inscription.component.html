@@ -1,1 +1,100 @@
-<p>inscription works!</p>
+<div class="bandeau">
+    <h1>Inscription</h1>
+</div>
+
+<div class="divFormulaireInscription">
+    <form class="formulaireInscription">
+        <div class="section">
+            <div class="titreSection">
+                <h3>Nom</h3>
+            </div>
+            <div class="inputSection">
+                <input type="text" formControlName="nom">
+            </div>
+        </div>
+        <div class="section">
+            <div class="titreSection">
+                <h3>Prénom</h3>
+            </div>
+            <div class="inputSection">
+                <input type="text" formControlName="prenom">
+            </div>
+        </div>
+        <div class="section">
+            <div class="titreSection">
+                <h3>Date de naissance</h3>
+            </div>
+            <div class="inputSection">
+                <input type="date" formControlName="dateNaissance">
+            </div>
+        </div>
+        <div class="section">
+            <div class="titreSection">
+                <h3>Email</h3>
+            </div>
+            <div class="inputSection">
+                <input type="email" formControlName="adresse">
+            </div>
+        </div>
+        <div class="section">
+            <div class="titreSection">
+                <h3>Mot de passe</h3>
+            </div>
+            <div class="inputSection">
+                <input type="password" formControlName="motDePasse">
+            </div>
+        </div>
+        <div class="section">
+            <div class="titreSection">
+                <h3>Confirmation mot de passe</h3>
+            </div>
+            <div class="inputSection">
+                <input type="password" formControlName="motDePasse">
+            </div>
+        </div>
+        <div class="section">
+            <div class="titreSection">
+                <h3>Téléphone</h3>
+            </div>
+            <div class="inputSection">
+                <input type="text" formControlName="telephone">
+            </div>
+        </div>
+        <div class="section">
+            <div class="titreSection">
+                <h3>Adresse postale</h3>
+            </div>
+            <div class="inputSection">
+                <input type="text" formControlName="adresse">
+            </div>
+        </div>
+        <div class="section">
+            <div class="titreSection">
+                <h3>Code postal</h3>
+            </div>
+            <div class="inputSection">
+                <input type="text" formControlName="codePostal">
+            </div>
+        </div>
+        <div class="section">
+            <div class="titreSection">
+                <h3>Ville</h3>
+            </div>
+            <div class="inputSection">
+                <input type="text" formControlName="ville">
+            </div>
+        </div>
+        <div class="section">
+            <div class="titreSection">
+                <h3>Civilité</h3>
+            </div>
+            <div class="inputSectionRadio">
+                <input type="radio" name="civilite" formControlName="civilite"> Mme
+                <input type="radio" name="civilite" formControlName="civilite"> M.
+            </div>
+        </div>
+        <div class="validerInscription">
+            <input type="submit" value="Valider">
+        </div> 
+    </form>
+</div>    
