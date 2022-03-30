@@ -5,6 +5,12 @@
     src : url("../assets/fonts/Montserrat-Regular.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "MontSerrat-Medium";
+    src : url("../assets/fonts/Montserrat-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
 a {
     color: black;
 }
@@ -14,4 +20,8 @@ body {
     font-family: "MontSerrat-Medium";
     color : black;
     margin : 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
 }
