@@ -3,7 +3,7 @@
 </div>
 
 <div class="divFormulaireInscription">
-    <form class="formulaireInscription">
+    <form [formGroup]="inscForm" class="formulaireInscription" (ngSubmit)="sInscrire()">
         <div class="section">
             <div class="titreSection">
                 <h3>Nom</h3>
@@ -11,6 +11,9 @@
             <div class="inputSection">
                 <input type="text" formControlName="nom">
             </div>
+        </div>
+        <div *ngIf="isSubmitted && formControls['nom'].errors" class="help-block">
+            <div *ngIf="formControls['nom'].errors['required']"><font color="red">Le nom est requis</font></div>
         </div>
         <div class="section">
             <div class="titreSection">
@@ -20,6 +23,9 @@
                 <input type="text" formControlName="prenom">
             </div>
         </div>
+        <div *ngIf="isSubmitted && formControls['prenom'].errors" class="help-block">
+            <div *ngIf="formControls['prenom'].errors['required']"><font color="red">Le prénom est requis</font></div>
+        </div>
         <div class="section">
             <div class="titreSection">
                 <h3>Date de naissance</h3>
@@ -28,29 +34,41 @@
                 <input type="date" formControlName="dateNaissance">
             </div>
         </div>
+        <div *ngIf="isSubmitted && formControls['prenom'].errors" class="help-block">
+            <div *ngIf="formControls['prenom'].errors['required']"><font color="red">La date de naissance est requise</font></div>
+        </div>
         <div class="section">
             <div class="titreSection">
                 <h3>Email</h3>
             </div>
             <div class="inputSection">
-                <input type="email" formControlName="adresse">
+                <input type="email" formControlName="email">
             </div>
+        </div>
+        <div *ngIf="isSubmitted && formControls['email'].errors" class="help-block">
+            <div *ngIf="formControls['email'].errors['required']"><font color="red">L'email est requis</font></div>
         </div>
         <div class="section">
             <div class="titreSection">
                 <h3>Mot de passe</h3>
             </div>
             <div class="inputSection">
-                <input type="password" formControlName="motDePasse">
+                <input type="password" formControlName="password">
             </div>
+        </div>
+        <div *ngIf="isSubmitted && formControls['password'].errors" class="help-block">
+            <div *ngIf="formControls['password'].errors['required']"><font color="red">Le mot de passe est requis</font></div>
         </div>
         <div class="section">
             <div class="titreSection">
                 <h3>Confirmation mot de passe</h3>
             </div>
             <div class="inputSection">
-                <input type="password" formControlName="motDePasse">
+                <input type="password" formControlName="passwordConfirm">
             </div>
+        </div>
+        <div *ngIf="isSubmitted && formControls['passwordConfirm'].errors" class="help-block">
+            <div *ngIf="formControls['passwordConfirm'].errors['required']"><font color="red">La confirmation du mot de passe est requise</font></div>
         </div>
         <div class="section">
             <div class="titreSection">
@@ -60,6 +78,9 @@
                 <input type="text" formControlName="telephone">
             </div>
         </div>
+        <div *ngIf="isSubmitted && formControls['telephone'].errors" class="help-block">
+            <div *ngIf="formControls['telephone'].errors['required']"><font color="red">Le numéro de téléphone est requis</font></div>
+        </div>
         <div class="section">
             <div class="titreSection">
                 <h3>Adresse postale</h3>
@@ -67,6 +88,9 @@
             <div class="inputSection">
                 <input type="text" formControlName="adresse">
             </div>
+        </div>
+        <div *ngIf="isSubmitted && formControls['adresse'].errors" class="help-block">
+            <div *ngIf="formControls['adresse'].errors['required']"><font color="red">L'adresse postale est requise</font></div>
         </div>
         <div class="section">
             <div class="titreSection">
@@ -76,6 +100,9 @@
                 <input type="text" formControlName="codePostal">
             </div>
         </div>
+        <div *ngIf="isSubmitted && formControls['codePostal'].errors" class="help-block">
+            <div *ngIf="formControls['codePostal'].errors['required']"><font color="red">L'adresse postale est requise</font></div>
+        </div>
         <div class="section">
             <div class="titreSection">
                 <h3>Ville</h3>
@@ -84,14 +111,20 @@
                 <input type="text" formControlName="ville">
             </div>
         </div>
+        <div *ngIf="isSubmitted && formControls['ville'].errors" class="help-block">
+            <div *ngIf="formControls['ville'].errors['required']"><font color="red">Le nom de la ville est requise</font></div>
+        </div>
         <div class="section">
             <div class="titreSection">
                 <h3>Civilité</h3>
             </div>
             <div class="inputSectionRadio">
-                <input type="radio" name="civilite" formControlName="civilite"> Mme
-                <input type="radio" name="civilite" formControlName="civilite"> M.
+                <input type="radio" value="true" formControlName="civilite"> Mme
+                <input type="radio" value="false" formControlName="civilite"> M.
             </div>
+        </div>
+        <div *ngIf="isSubmitted && formControls['civilite'].errors" class="help-block">
+            <div *ngIf="formControls['civilite'].errors['required']"><font color="red">La civilité est requise</font></div>
         </div>
         <div class="validerInscription">
             <input type="submit" value="Valider">

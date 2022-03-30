@@ -17,6 +17,9 @@ export class AuthGuard implements CanActivate {
           case '/connexion' :
             this.router.navigateByUrl("/");
             return false;
+          case '/inscription' :
+            this.router.navigateByUrl("/");
+            return false;  
         }     
       }
       else {
@@ -25,7 +28,9 @@ export class AuthGuard implements CanActivate {
             return true;
           case '/parametres' :
             this.router.navigateByUrl("/");
-            return false;  
+            return false;
+          case '/inscription' :
+            return true;    
         }
       }
 

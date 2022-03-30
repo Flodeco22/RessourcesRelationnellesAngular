@@ -7,7 +7,6 @@
             display: grid;
             grid-template-columns: 0.25fr 0.60fr;
             grid-gap: 10px;
-            grid-auto-rows: minmax(100px, auto);
             align-items: baseline;
 
             .titreSection {
@@ -27,6 +26,11 @@
                     border: 0.10rem solid $grey;
                 }
             }
+        }
+
+        .help-block {
+            display: flex;
+            justify-content: center;
         }
 
         .validerInscription {
