@@ -1,0 +1,52 @@
+.bouton {
+    display: inline-flex;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    color:$white;
+    border-radius: 0.5rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+}
+
+.boutonJaune {
+    @extend .bouton;
+    background-color: $yellow;
+
+    &:hover {
+        background-color: $darken-yellow;
+    }
+
+    &:active {
+        background-color: $yellow;
+    }
+}
+
+.boutonVert {
+    @extend .bouton;
+    background-color: $green;
+
+    &:hover {
+        background-color: $darken-green;
+    }
+
+    &:active {
+        background-color: $green;
+    }
+}
+
+.boutonRouge {
+    @extend .bouton;
+    background-color: $red;
+
+    &:hover {
+        background-color: $darken-red;
+    }
+
+    &:active {
+        background-color: $red;
+    }
+}

@@ -1,6 +1,12 @@
-<div class="bandeau">
-    <h1>Galerie des ressources</h1>
+<div class="bandeauPere">
+    <div class="bandeau">
+        <h1>Galerie des ressources</h1>
+    </div>
+    <div class="bouton">
+        <a class="boutonJaune" href="#">Ajouter une ressource</a>
+    </div>
 </div>
+
 
 <form class="formulaireRessources" [formGroup]="ressourcesForm" (ngSubmit)="rechercherRessources()">
     <div class="ordonner">
@@ -41,6 +47,81 @@
     <div class="validation">
         <input type="submit" value="Valider">
     </div>
-    
-
 </form>
+
+<div class="listRessources">
+    <div class="ressource">
+        <div class="haut" style="background-image:url('../../assets/images/ressources/assetsRessources/ressource-Bourgade/bourgade.jpg');">
+        </div>
+        <div class="bas">
+            <div class="titreRessource">
+                Les bonnes opération communautaire
+            </div>
+            <div class="descriptionRessource">
+                <div class="gauche">
+                    <div>
+                        <span class="boldSpan">Auteur :</span> Diane Romaneze
+                    </div>
+                    <div>
+                        <span class="boldSpan">Type de ressource :</span> Article
+                    </div>
+                    <div>
+                        <span class="boldSpan">Vues :</span> 197
+                    </div>
+                </div>
+                <div class="centre">
+                    <a class="boutonVert" routerLink="/ressource/1">Visualiser</a>
+                    <a class="boutonJaune" href="#">Modifier</a>
+                </div>
+                <div class="droite">
+                    <div>
+                        <span class="boldSpan">Date de publication :</span> 02/02/2022
+                    </div>
+                    <div>
+                        <span class="boldSpan">Statut :</span> public
+                    </div>
+                    <div>
+                        #Communes
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ressource">
+        <div class="haut" style="background-image:url('../../assets/images/ressources/assetsRessources/ressource-Diablo3/Diablo3.jpg');">
+        </div>
+        <div class="bas">
+            <div class="titreRessource">
+                Diablo III
+            </div>
+            <div class="descriptionRessource">
+                <div class="gauche">
+                    <div>
+                        <span class="boldSpan">Auteur :</span> Oreille Salle
+                    </div>
+                    <div>
+                        <span class="boldSpan">Type de ressource :</span> Jeu
+                    </div>
+                    <div>
+                        <span class="boldSpan">Vues :</span> 100
+                    </div>
+                </div>
+                <div class="centre">
+                    <a class="boutonVert" routerLink="/ressource/1">Visualiser</a>
+                    <a class="boutonJaune" href="#">Modifier</a>
+                </div>
+                <div class="droite">
+                    <div>
+                        <span class="boldSpan">Date de publication :</span> 04/02/2022
+                    </div>
+                    <div>
+                        <span class="boldSpan">Statut :</span> public
+                    </div>
+                    <div>
+                        #G@mer
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
