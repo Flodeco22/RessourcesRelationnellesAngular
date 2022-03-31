@@ -1,2 +1,102 @@
 @import "variables/colors";
 @import "parts/bandeau";
+
+.formulaireRessources {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.25rem;
+    .ordonner {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        flex-wrap: wrap;
+        .vue {
+
+        }
+
+        .date {
+
+        }
+    }
+
+    .recherche {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        flex-wrap: wrap;
+        column-gap: 1rem;
+        .ressource, .auteur {
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            input {
+                font-size: 1.25rem;
+                border: 0.10rem $grey solid;
+                width: 20rem;
+                height: 1.5rem;
+                background-color: $darken-white;
+            }
+        }
+    }
+
+    .mesRessources {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-top: $grey solid 0.10rem;
+        border-bottom: $grey solid 0.10rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        input {
+            border: 0.10rem $grey solid;
+            height: 2rem;
+            font-size: 1.25rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .selectFiltre {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        border-bottom: $grey solid 0.10rem;
+        padding-bottom: 0.5rem;
+        flex-wrap: wrap;
+        .typeRessource, .categorieRessource {
+            select {
+                width: 15rem;
+                height: 1.5rem;
+                border: 0.10rem $grey solid;
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    .validation {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 2rem;
+        border-bottom: $grey solid 0.10rem;
+        padding-bottom: 0.5rem;
+        input {
+            background-color: $green;
+            border : 0.10rem solid $grey;
+            font-size: 1.25rem;
+
+            &:hover {
+                cursor:pointer;
+                background-color: $darken-green;
+            }
+        }
+    }
+}

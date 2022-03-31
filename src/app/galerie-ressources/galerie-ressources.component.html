@@ -1,1 +1,46 @@
-<p>galerie-ressources works!</p>
+<div class="bandeau">
+    <h1>Galerie des ressources</h1>
+</div>
+
+<form class="formulaireRessources" [formGroup]="ressourcesForm" (ngSubmit)="rechercherRessources()">
+    <div class="ordonner">
+        <div class="vue">
+            <input type="radio" formControlName="ordonner" value="vue"> Ordonner par vue
+        </div>
+        <div class="date">
+            <input type="radio" formControlName="ordonner" value="date"> Ordonner par date
+        </div>    
+    </div>
+    <div class="recherche">
+        <div class="ressource">
+            <input type="text" placeholder="Rechercher une ressource..." formControlName="ressourceNom">
+        </div>
+        <div class="auteur">
+            <input type="text" placeholder="Rechercher un auteur..." formControlName="auteurNom">
+        </div>
+    </div>
+    <div class="mesRessources">
+        <input type="button" formControlName="mesRessources" value="Mes ressources">
+    </div>
+    <div class="selectFiltre">
+        <div class="typeRessource">
+            <select autocomplete="off" formControlName="typeDeRessource">
+                <option selected disabled value="">Filtrer par type de ressource...</option>
+                <option value="article">Article</option>
+                <option value="jeuxVideos">Jeux-vidéos</option>
+            </select>
+        </div>
+        <div class="categorieRessource">
+            <select formControlName="categorieRessource">
+                <option selected disabled value="">Filtrer par catégorie...</option>
+                <option value="communes">Communes</option>
+                <option value="diablo">Diablo</option>
+            </select>
+        </div>
+    </div>
+    <div class="validation">
+        <input type="submit" value="Valider">
+    </div>
+    
+
+</form>
