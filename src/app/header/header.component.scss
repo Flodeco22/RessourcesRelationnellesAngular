@@ -33,6 +33,10 @@
     a {
       text-decoration: none;
       color : black;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .leftHeader {

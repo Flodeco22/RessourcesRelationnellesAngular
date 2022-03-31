@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'inscription', component: InscriptionComponent, canActivate: [AuthGuard] },
   { path: 'connexion', component : ConnexionComponent, canActivate: [AuthGuard]},
   { path: 'parametres', component : CompteComponent, canActivate: [AuthGuard]},
-  { path: 'gallerieRessources', component : GalerieRessourcesComponent},
+  { path: 'ressources', component : GalerieRessourcesComponent},
   { path: 'ressource/ajouter', component: AjoutRessourceComponent},
   { path: 'ressource/:id', component : RessourceComponent, children : [
     {path: '', component: VisionComponent},

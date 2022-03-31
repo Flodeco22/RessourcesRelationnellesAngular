@@ -5,7 +5,17 @@
     </div>
     <nav class="navbarHeader">
         <div class="leftHeader">
-            <div class="cellNav">
+            <div *ngIf="!authService.estConnecte()" class="cellNav">
+                <div class="cellTitleDiv">
+                    <a routerLink="/inscription"> Inscription</a>
+                </div>
+            </div>
+            <div *ngIf="!authService.estConnecte()" class="cellNav">
+                <div class="cellTitleDiv">
+                    <a routerLink="/connexion"> Connexion</a>
+                </div>
+            </div>
+            <div *ngIf="authService.estConnecte()" class="cellNav">
                 <div class="cellTitleDiv active">
                     <a href="#">Mon compte</a>
                 </div>    
@@ -14,7 +24,7 @@
                     <li><a href="#">Mon profil</a></li>
                     <li><a href="#">Mes contacts</a></li>
                     <li><a href="#">Messagerie</a></li>
-                    <li><a href="#">Deconnexion</a></li>
+                    <li><a (click)="authService.deconnecter()">Deconnexion</a></li>
                 </ul>
             </div>    
             <div class="cellNav">
@@ -22,8 +32,8 @@
                     <a href="#">Ressources</a>
                 </div>    
                 <ul class="dropdown-content">
-                    <li><a routerLink="gallerieRessources">Accéder à la galerie de ressources</a></li>
-                    <li><a href="#">Mes ressources</a></li>
+                    <li><a routerLink="ressources">Accéder à la galerie de ressources</a></li>
+                    <li><a *ngIf="authService.estConnecte()" href="#">Mes ressources</a></li>
                     <li><a href="#">Découvrir une ressource</a></li>
                 </ul>
             </div>   
