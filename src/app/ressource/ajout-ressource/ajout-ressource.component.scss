@@ -1,0 +1,63 @@
+@import "variables/colors";
+@import "parts/bandeau";
+@import "parts/boutons";
+
+.formulaireRessource {
+    margin: 1rem;
+    label {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .composantsArticle {
+
+        margin-bottom: 1rem;
+
+        .ligne1, .ligne2 {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            column-gap: 2rem;
+            .titre, .visibilite, .typeDeRessource, .categorieRessource {
+                flex-grow: 1;
+                display: flex;
+                column-gap: 3rem;
+                flex-wrap: wrap;
+
+                select {
+                    border: 0.10rem $black solid;
+                    background-color: $white;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .ligne2 {
+            margin-top: 1rem;
+        }
+    }
+
+    .contenuArticle {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 1rem;
+        align-items: flex-end;
+        .contenu {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            .contenuTexte{
+                margin-top: 1rem;
+                textarea {
+                    width: 100%;
+                }    
+            }
+        }
+
+        .publication {
+            input {
+                padding-left: 5rem;
+                padding-right: 5rem;
+            }
+        }
+    }
+}
