@@ -11,10 +11,10 @@
 <form class="formulaireRessources" [formGroup]="ressourcesForm" (ngSubmit)="rechercherRessources()">
     <div class="ordonner">
         <div class="vue">
-            <input type="radio" formControlName="ordonner" value="vue"> Ordonner par vue
+            <input type="radio" value="vue" formControlName="ordonner"> Ordonner par vue
         </div>
         <div class="date">
-            <input type="radio" formControlName="ordonner" value="date"> Ordonner par date
+            <input type="radio" value="date" formControlName="ordonner" checked="checked"> Ordonner par date
         </div>    
     </div>
     <div class="recherche">
@@ -26,21 +26,21 @@
         </div>
     </div>
     <div class="mesRessources">
-        <input type="button" formControlName="mesRessources" value="Mes ressources">
+        <input id="mesRessources" type="button" formControlName="mesRessources" (click)="this.mesRessources()" value="{{ this.valueMesRessource }}">
     </div>
     <div class="selectFiltre">
         <div class="typeRessource">
             <select autocomplete="off" formControlName="typeDeRessource">
                 <option selected disabled value="">Filtrer par type de ressource...</option>
-                <option value="article">Article</option>
-                <option value="jeuxVideos">Jeux-vidéos</option>
+                <option value="1">Article</option>
+                <option value="2">Jeux-vidéos</option>
             </select>
         </div>
         <div class="categorieRessource">
             <select formControlName="categorieRessource">
                 <option selected disabled value="">Filtrer par catégorie...</option>
-                <option value="communes">Communes</option>
-                <option value="diablo">Diablo</option>
+                <option value="1">Communes</option>
+                <option value="2">Diablo</option>
             </select>
         </div>
     </div>

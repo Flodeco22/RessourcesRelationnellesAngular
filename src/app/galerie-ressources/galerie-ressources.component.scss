@@ -75,8 +75,8 @@
         flex-wrap: wrap;
         .typeRessource, .categorieRessource {
             select {
-                width: 15rem;
-                height: 1.5rem;
+                width: 25rem;
+                height: 2rem;
                 border: 0.10rem $grey solid;
                 font-size: 1.25rem;
             }
@@ -92,8 +92,13 @@
         padding-bottom: 0.5rem;
         input {
             background-color: $green;
-            border : 0.10rem solid $grey;
+            border : none;
             font-size: 1.25rem;
+            color : $white;
+            font-weight: bold;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            border-radius: 1rem;
 
             &:hover {
                 cursor:pointer;
