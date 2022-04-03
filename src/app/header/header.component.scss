@@ -69,10 +69,10 @@
     }
 
     .active {
-      background-color: $yellow;
+      background-color: $yellow !important;
 
       &:hover {
-        background-color: $darken-yellow;
+        background-color: $darken-yellow !important;
       }
 
     }

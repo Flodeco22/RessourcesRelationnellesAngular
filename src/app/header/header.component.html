@@ -6,21 +6,21 @@
     <nav class="navbarHeader">
         <div class="leftHeader">
             <div *ngIf="!authService.estConnecte()" class="cellNav">
-                <div class="cellTitleDiv">
+                <div class="cellTitleDiv" [class.active]="this.router.url === '/inscription'">
                     <a routerLink="/inscription"> Inscription</a>
                 </div>
             </div>
             <div *ngIf="!authService.estConnecte()" class="cellNav">
-                <div class="cellTitleDiv">
+                <div [class.active]="this.router.url === '/connexion'" class="cellTitleDiv">
                     <a routerLink="/connexion"> Connexion</a>
                 </div>
             </div>
             <div *ngIf="authService.estConnecte()" class="cellNav">
-                <div class="cellTitleDiv active">
-                    <a href="#">Mon compte</a>
+                <div class="cellTitleDiv" [class.active]="this.router.url === '/parametres'">
+                    <a>Mon compte</a>
                 </div>    
                 <ul class="dropdown-content">
-                    <li><a routerLink="/parametres">Paramètres</a></li>
+                    <li [class.active]="this.router.url === '/parametres'"><a routerLink="/parametres">Paramètres</a></li>
                     <li><a href="#">Mon profil</a></li>
                     <li><a href="#">Mes contacts</a></li>
                     <li><a href="#">Messagerie</a></li>
@@ -28,11 +28,11 @@
                 </ul>
             </div>    
             <div class="cellNav">
-                <div class="cellTitleDiv">
-                    <a href="#">Ressources</a>
+                <div class="cellTitleDiv" [class.active]="this.router.url.includes('ressource')">
+                    <a>Ressources</a>
                 </div>    
                 <ul class="dropdown-content">
-                    <li><a routerLink="ressources">Accéder à la galerie de ressources</a></li>
+                    <li [class.active]="this.router.url === '/ressources'"><a routerLink="ressources">Accéder à la galerie de ressources</a></li>
                     <li><a *ngIf="authService.estConnecte()" href="#">Mes ressources</a></li>
                     <li><a href="#">Découvrir une ressource</a></li>
                 </ul>
