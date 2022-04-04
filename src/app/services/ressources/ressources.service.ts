@@ -1,4 +1,5 @@
 import { DatePipe, formatDate } from '@angular/common';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Ressource } from 'src/app/interfaces/ressource';
@@ -8,7 +9,8 @@ import { Ressource } from 'src/app/interfaces/ressource';
 })
 export class RessourcesService {
   datePipe !: DatePipe;
-  constructor() { }
+  
+  constructor(private http : HttpClient) { }
 
 
   public rechercherRessource(filtresRessource: FormGroup){
@@ -29,10 +31,21 @@ export class RessourcesService {
     console.log(categorieRessource);
     console.log(mesRessources);
 
+    let apiUrl = 'https://demo3146594.mockable.io/';
+
+    let headersInfo = {
+      'Accept' : '*/*',
+      'Content-Type' : 'application/json',
+      'Access-Control-Allow-Origin' : '*',
+      'Access-Control-Allow-Headers' : 'Content-Type',
+      'Access-Control-Allow-Methods' : 'GET,POST,OPTIONS,DELETE,PUT'
+    }
+
     //Les ressources à afficher dans la galerie des ressources
     let ressourcesTab : Array<Ressource> = [];
 
-    return ressourcesTab;
+    //return this.http.get<any>(apiUrl);
+    return this.http.get<any>(apiUrl, {headers : headersInfo});
 
   }
 

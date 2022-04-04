@@ -18,4 +18,8 @@ export class AuthService {
   public deconnecter(){
     sessionStorage.removeItem('ACCESS_TOKEN');
   }
+
+  public getToken() {
+    return sessionStorage.getItem('ACCESS_TOKEN');
+  }
 }
