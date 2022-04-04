@@ -39,7 +39,7 @@ export class RessourcesService {
 
   public ajouterRessource(ajoutRessource: Ressource){
     //A compléter avec l'API
-
+    
     let titre = ajoutRessource.titre;
     let datePublication = formatDate(new Date(), 'dd-MM-yyyy','en') ;
     let dateModification = datePublication;
@@ -75,7 +75,7 @@ export class RessourcesService {
 
   public modifierRessource(modifierRessource: Ressource){
     //A compléter avec l'API
-
+    let id = modifierRessource.id;
     let titre = modifierRessource.titre;
     let dateModification = formatDate(new Date(), 'dd-MM-yyyy','en');
     let visibilite = modifierRessource.visibilite;
@@ -88,6 +88,7 @@ export class RessourcesService {
     let idAuteur = 1;
 
     console.log('--ModificationRessource--');
+    console.log(id);
     console.log(titre);
     console.log(dateModification);
     console.log(visibilite);

@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
 })
 export class RessourceComponent implements OnInit {
 
-  id = 0;
+  id:number = 0;
   paramsSubscription: Subscription = new Subscription;
 
   constructor(private route: ActivatedRoute) {}

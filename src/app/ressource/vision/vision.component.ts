@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-vision',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VisionComponent implements OnInit {
 
-  constructor() { }
-  id = 0;
-  ngOnInit(): void {
-  }
+  id:number = 0;
+  constructor(private route: ActivatedRoute) {}
+  paramsSubscription: Subscription = new Subscription;
 
+  ngOnInit() {
+    this.paramsSubscription = this.route.params.subscribe(params => {
+      this.id = +params['id']; // (+) converts string 'id' to a number
+    });
+    
+  } 
 }
