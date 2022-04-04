@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class VisionComponent implements OnInit {
 
   constructor() { }
-
+  id = 0;
   ngOnInit(): void {
   }
 

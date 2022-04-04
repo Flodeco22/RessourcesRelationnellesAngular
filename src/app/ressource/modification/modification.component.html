@@ -1,1 +1,54 @@
-<p>modification works!</p>
+<div class="bandeau">
+    <h1>Modification une ressource</h1>
+</div>
+
+<form [formGroup]="modifierRessourceForm" class="formulaireRessource" (ngSubmit)="this.modifierRessource()">
+    <div class="composantsArticle">
+        <div class="ligne1">
+            <div class="titre">
+                <label>Titre</label>
+                <input type="text" value="" formControlName="titre">
+            </div>
+            <div class="visibilite">
+                <label>Visibilité</label>
+                <select formControlName="visibilite">
+                    <option value="public">public</option>
+                    <option value="privé">privé</option>
+                </select>
+            </div>
+        </div>
+        <div class="ligne2">
+            <div class="typeDeRessource">
+                <label>Type de ressource</label>
+                <select  formControlName="idTypeRessource">
+                    <option value="1">Activité / Jeu à réaliser</option>
+                    <option value="2">Article</option>
+                    <option value="3">Carte défi</option>
+                    <option value="4">Cours au format PDF</option>
+                    <option value="5">Exercice / Atelier</option>
+                    <option value="6">Fiche de lecture</option>
+                    <option value="7">Jeu en ligne</option>
+                    <option value="8">Vidéo</option>
+                </select>
+            </div>
+            <div class="categorieRessource">
+                <label>Catégorie</label>
+                <select  formControlName="idCategorie">
+                    <option value="1">Communes</option>
+                    <option value="2">G@mer</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="contenuArticle">
+        <div class="contenu">
+            <label>Contenu</label>
+            <div class="contenuTexte">
+                <textarea  formControlName="repContenu"></textarea>
+            </div>
+        </div>    
+        <div class="publication">
+            <input class="boutonJaune" type="submit" value="Publier">
+        </div>
+    </div>
+</form>    
