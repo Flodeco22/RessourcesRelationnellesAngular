@@ -32,7 +32,9 @@ export class GalerieRessourcesComponent implements OnInit {
   }
 
   rechercherRessources() {
-    this.tabRessources = this.ressourcesService.rechercherRessource(this.ressourcesForm);
+    this.ressourcesService.rechercherRessource(this.ressourcesForm).subscribe((value)=>{
+      console.log(value);
+    });
   }
 
   mesRessources() {    

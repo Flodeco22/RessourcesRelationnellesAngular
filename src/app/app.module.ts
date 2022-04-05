@@ -20,6 +20,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MdpOublieComponent } from './mdp-oublie/mdp-oublie.component';
 import { NewMdpComponent } from './mdp-oublie/new-mdp/new-mdp.component';
 import { EmailComponent } from './mdp-oublie/email/email.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptorService } from './services/auth/auth-interceptor.service';
+import { AuthService } from './services/auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -45,9 +48,17 @@ import { EmailComponent } from './mdp-oublie/email/email.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    AuthService , 
+   {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptorService,
+    multi: true
+   },
+  ], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }
