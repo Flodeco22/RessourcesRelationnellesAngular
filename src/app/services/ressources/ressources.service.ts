@@ -36,9 +36,6 @@ export class RessourcesService {
     let headersInfo = {
       'Accept' : '*/*',
       'Content-Type' : 'application/json',
-      'Access-Control-Allow-Origin' : '*',
-      'Access-Control-Allow-Headers' : 'Content-Type',
-      'Access-Control-Allow-Methods' : 'GET,POST,OPTIONS,DELETE,PUT'
     }
 
     //Les ressources à afficher dans la galerie des ressources

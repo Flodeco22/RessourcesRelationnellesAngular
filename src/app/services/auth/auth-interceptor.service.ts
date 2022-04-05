@@ -17,7 +17,7 @@ export class AuthInterceptorService {
       
       // If we have a token, we set it to the header
       request = request.clone({
-        setHeaders: {Authorization: `Authorization token ${token}`}
+        setHeaders: {Authorization: `Bearer ${token}`}
       });
     }
 
