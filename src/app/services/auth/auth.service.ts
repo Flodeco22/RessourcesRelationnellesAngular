@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Utilisateur } from 'src/app/interfaces/utilisateur';
 
 @Injectable({
@@ -18,7 +19,17 @@ export class AuthService {
   public deconnecter(){
     sessionStorage.removeItem('ACCESS_TOKEN');
   }
+  
+  public sendMdpOublier(formEmail : FormGroup){
+    console.log('--sendMdpOublierAuth--');
+    console.log(formEmail.value.email);
+  }
 
+  public newMdp(formMdp : FormGroup){
+    console.log('--newMdpAuth--');
+    console.log(formMdp.value.newPassword);
+    console.log(formMdp.value.newPasswordConfirm);
+    
   public getToken() {
     return sessionStorage.getItem('ACCESS_TOKEN');
   }

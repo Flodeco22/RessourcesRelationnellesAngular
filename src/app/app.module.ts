@@ -17,6 +17,9 @@ import { ModificationComponent } from './ressource/modification/modification.com
 import { VisionComponent } from './ressource/vision/vision.component';
 import { AjoutRessourceComponent } from './ressource/ajout-ressource/ajout-ressource.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MdpOublieComponent } from './mdp-oublie/mdp-oublie.component';
+import { NewMdpComponent } from './mdp-oublie/new-mdp/new-mdp.component';
+import { EmailComponent } from './mdp-oublie/email/email.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptorService } from './services/auth/auth-interceptor.service';
 import { AuthService } from './services/auth/auth.service';
@@ -36,7 +39,10 @@ import { AuthService } from './services/auth/auth.service';
     CompteComponent,
     ModificationComponent,
     VisionComponent,
-    AjoutRessourceComponent
+    AjoutRessourceComponent,
+    MdpOublieComponent,
+    NewMdpComponent,
+    EmailComponent
   ],
   imports: [
     BrowserModule,
