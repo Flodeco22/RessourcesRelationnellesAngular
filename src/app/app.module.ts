@@ -19,6 +19,7 @@ import { AjoutRessourceComponent } from './ressource/ajout-ressource/ajout-resso
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MdpOublieComponent } from './mdp-oublie/mdp-oublie.component';
 import { NewMdpComponent } from './mdp-oublie/new-mdp/new-mdp.component';
+import { EmailComponent } from './mdp-oublie/email/email.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { NewMdpComponent } from './mdp-oublie/new-mdp/new-mdp.component';
     VisionComponent,
     AjoutRessourceComponent,
     MdpOublieComponent,
-    NewMdpComponent
+    NewMdpComponent,
+    EmailComponent
   ],
   imports: [
     BrowserModule,

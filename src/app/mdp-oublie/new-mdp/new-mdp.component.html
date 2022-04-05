@@ -1,33 +1,46 @@
-<div class="ensembleMdpOublie">
+<div class="ensembleNewMdp">
     <div class="banderole">
     </div>
     
     
     <div class="mdpOublie">
-      <form [formGroup]="mdpOublieForm " class="mdpOublieContainer" (ngSubmit)="mdpOublie()">
+      <form [formGroup]="newMdpForm" class="mdpOublieContainer" (ngSubmit)="newMdp()">
         <div class="titreFormulaire">
-          <h2 class="mdpOublieHeader">Mot de passe oublié ?</h2>
+          <h2 class="mdpOublieHeader">Modification du mot de passe</h2>
         </div>
-        <div class="partieEmail">
-          <div class="infoFormulaire">
-            <div>
-              <h3>Email</h3>
-            </div>  
-            <div *ngIf="isSubmitted && formControls['email'].errors" class="help-block">
-                <div *ngIf="formControls['email'].errors['required']"><font color="red">L'email est requis</font></div>
-                <div *ngIf="isUnknown"><font color="red">L'email n'est pas connu</font></div>
-            </div>
+        <div class="partieMdp">
+            <div *ngIf="!isSame"><font color="red">Les mots de passe ne sont pas identiques</font></div>
+            <div class="infoFormulaire">
+              <div>
+                <h3>Nouveau mot de passe</h3>
+              </div>  
+              <div *ngIf="isSubmitted && formControls['newPassword'].errors" class="help-block">
+                <div *ngIf="formControls['newPassword'].errors['required']"><font color="red">Mot de passe requis</font></div>
+              </div>
+            </div>   
+            <p [ngClass]="{ 'has-error': isSubmitted && formControls['newPassword'].errors }">
+              <input type="password" formControlName="newPassword">
+            </p>
           </div>
-          <p [ngClass]="{ 'has-error': isSubmitted && formControls['email'].errors }">
-            <input type="email" formControlName="email">
-          </p>
-        </div>  
+          <div class="partieMdpConfirm">
+            <div class="infoFormulaire">
+              <div>
+                <h3>Confirmer le nouveau mot de passe</h3>
+              </div>  
+              <div *ngIf="isSubmitted && formControls['newPasswordConfirm'].errors" class="help-block">
+                <div *ngIf="formControls['newPasswordConfirm'].errors['required']"><font color="red">Mot de passe requis</font></div>
+              </div>
+            </div>   
+            <p [ngClass]="{ 'has-error': isSubmitted && formControls['newPasswordConfirm'].errors }">
+              <input type="password" formControlName="newPasswordConfirm">
+            </p>
+          </div>
         
         <div class="liensFormulaire">
           <div class="seConnecter">
             <a routerLink="/connexion">Retour</a>
           </div>
-          <div class="validerMdpOublie">
+          <div class="validerNewPwd">
             <input type="submit" value="Envoyer">
           </div>  
         </div>

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { AccueilComponent } from './accueil/accueil.component';
@@ -12,6 +12,8 @@ import { VisionComponent } from './ressource/vision/vision.component';
 import { AjoutRessourceComponent } from './ressource/ajout-ressource/ajout-ressource.component';
 import { AuthGuard } from './guards/auth.guard';
 import { MdpOublieComponent } from './mdp-oublie/mdp-oublie.component';
+import { EmailComponent } from './mdp-oublie/email/email.component';
+import { NewMdpComponent } from './mdp-oublie/new-mdp/new-mdp.component';
 
 const routes: Routes = [
   { path: '', component: AccueilComponent},
@@ -24,7 +26,11 @@ const routes: Routes = [
     {path: '', component: VisionComponent},
     {path: 'modification', component : ModificationComponent}
   ]},
-  { path: 'mdp-oublie', component: MdpOublieComponent}
+  { path: 'mdp-oublie', component: MdpOublieComponent, children : [
+    {path: '', component: EmailComponent},
+    {path: 'new-password', component:NewMdpComponent}
+  ]},
+  {path: '**',redirectTo: '/'}
 ];
 
 @NgModule({

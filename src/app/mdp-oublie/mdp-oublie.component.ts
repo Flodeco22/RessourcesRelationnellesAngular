@@ -9,28 +9,11 @@ import { AuthService } from '../services/auth/auth.service';
   styleUrls: ['./mdp-oublie.component.scss']
 })
 export class MdpOublieComponent implements OnInit {
-  mdpOublieForm!: FormGroup;
-  isSubmitted = false;
-  isUnknown: boolean = false;
-  constructor(private formBuilder: FormBuilder ,private router: Router,
-     private authService: AuthService) { }
+  
+  constructor() { }
 
   ngOnInit() {
-    this.mdpOublieForm = this.formBuilder.group({
-      email: ['', Validators.required]
-    });
+    
   }
-  get formControls() { return this.mdpOublieForm.controls; }
-
-  mdpOublie(){
-    this.isSubmitted = true;
-
-    if(this.mdpOublieForm.invalid){
-      return;
-    }
   
-    this.authService.sendMdpOublier(this.mdpOublieForm.value);
-  
-    this.router.navigateByUrl('/connexion');
-  }
 }

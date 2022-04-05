@@ -1,6 +1,6 @@
 @import "variables/colors";
 
-.ensembleNewMdp {
+.ensembleMdpOublie {
     display: flex;
 
     h3 {
@@ -35,7 +35,7 @@
                 }
             }
 
-            .partieMdpConfirm , .partieMdp {
+            .partieEmail {
                 
                 .infoFormulaire {
                     display: flex;
@@ -67,7 +67,7 @@
                     }
                 }
 
-                .validerNewPwd {
+                .validerMdpOublie {
                     input {
                         background-color: $green;
                         border : 0.10rem solid $grey;
