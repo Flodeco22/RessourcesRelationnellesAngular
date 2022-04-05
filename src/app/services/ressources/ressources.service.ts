@@ -31,7 +31,7 @@ export class RessourcesService {
     console.log(categorieRessource);
     console.log(mesRessources);
 
-    let apiUrl = 'https://demo3146594.mockable.io/';
+    let apiUrl = 'http://10.114.128.228:8081/ressource';
 
     let headersInfo = {
       'Accept' : '*/*',

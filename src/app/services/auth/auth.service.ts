@@ -29,6 +29,7 @@ export class AuthService {
     console.log('--newMdpAuth--');
     console.log(formMdp.value.newPassword);
     console.log(formMdp.value.newPasswordConfirm);
+  }  
     
   public getToken() {
     return sessionStorage.getItem('ACCESS_TOKEN');
