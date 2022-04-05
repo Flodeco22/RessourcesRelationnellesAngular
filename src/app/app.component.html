@@ -1,8 +1,8 @@
-<app-header *ngIf="!router.url.includes('connexion')"></app-header>
+<app-header *ngIf="!router.url.includes('connexion') && !router.url.includes('mdp-oublie')"></app-header>
 
 <div class="container">
   <router-outlet></router-outlet>
 </div>
 
-<app-footer *ngIf="!router.url.includes('connexion')"></app-footer>
+<app-footer *ngIf="!router.url.includes('connexion') && !router.url.includes('mdp-oublie')"></app-footer>
 

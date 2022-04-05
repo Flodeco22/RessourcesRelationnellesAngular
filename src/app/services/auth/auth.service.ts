@@ -18,4 +18,16 @@ export class AuthService {
   public deconnecter(){
     sessionStorage.removeItem('ACCESS_TOKEN');
   }
+
+  public sendMdpOublier(Email: string){
+    console.log('--sendMdpOublierAuth--');
+    console.log(Email);
+  }
+
+  public newMdp(utilisateur: Utilisateur , newpassword: string){
+    console.log('--newMdpAuth--');
+    utilisateur.password = newpassword;
+    console.log(utilisateur.email);
+    console.log(utilisateur.password);
+  }
 }

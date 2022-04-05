@@ -11,6 +11,7 @@ import { ModificationComponent } from './ressource/modification/modification.com
 import { VisionComponent } from './ressource/vision/vision.component';
 import { AjoutRessourceComponent } from './ressource/ajout-ressource/ajout-ressource.component';
 import { AuthGuard } from './guards/auth.guard';
+import { MdpOublieComponent } from './mdp-oublie/mdp-oublie.component';
 
 const routes: Routes = [
   { path: '', component: AccueilComponent},
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'ressource/:id', component : RessourceComponent, children : [
     {path: '', component: VisionComponent},
     {path: 'modification', component : ModificationComponent}
-  ]}
+  ]},
+  { path: 'mdp-oublie', component: MdpOublieComponent}
 ];
 
 @NgModule({

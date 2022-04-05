@@ -17,6 +17,8 @@ import { ModificationComponent } from './ressource/modification/modification.com
 import { VisionComponent } from './ressource/vision/vision.component';
 import { AjoutRessourceComponent } from './ressource/ajout-ressource/ajout-ressource.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MdpOublieComponent } from './mdp-oublie/mdp-oublie.component';
+import { NewMdpComponent } from './mdp-oublie/new-mdp/new-mdp.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CompteComponent,
     ModificationComponent,
     VisionComponent,
-    AjoutRessourceComponent
+    AjoutRessourceComponent,
+    MdpOublieComponent,
+    NewMdpComponent
   ],
   imports: [
     BrowserModule,
